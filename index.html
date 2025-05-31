@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NovaTalk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="join-room-container">
+            <h1>Join a Chat Room</h1>
+            <input type="text" id="room-name-input" placeholder="Room Name">
+            <input type="text" id="username-input" placeholder="Your Username">
+            <button id="join-room-button">Join Room</button>
+            <div class="app-info">
+                <p>Your User ID: []</p>
+                <p>App ID: []</p>
+            </div>
+        </div>
+
+        <div id="chat-container" style="display: none;">
+            <div class="chat-header">
+                <h2 id="room-title"></h2>
+                <div id="current-user-info"></div>
+            </div>
+            <ul id="messages"></ul>
+            <div id="typing-indicator"></div>
+            <form id="form">
+                <input type="text" id="input" autocomplete="off" placeholder="Type a message..." />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
